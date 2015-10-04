@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://register.nhn.no/Resh" elementFormDefault="qualified" targetNamespace="http://register.nhn.no/Resh" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" />
+  <xs:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd6" namespace="http://register.nhn.no/CommunicationParty" />
+  <xs:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd3" namespace="http://register.nhn.no/Common" />
+  <xs:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd9" namespace="http://register.nhn.no/RESH" />
+  <xs:element name="CreateDepartment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="departmentCreate" nillable="true" type="q1:DepartmentCreate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDepartmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="CreateDepartmentResult" nillable="true" type="q2:Department" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDepartment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="departmentUpdate" nillable="true" type="q3:DepartmentUpdate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDepartmentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveDepartment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+        <xs:element minOccurs="0" name="moveTargetReshId" type="xs:int" />
+        <xs:element minOccurs="0" name="moveTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveDepartmentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrganization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="org" nillable="true" type="q4:OrganizationCreate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrganizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="CreateOrganizationResult" nillable="true" type="q5:Organization" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrganization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="org" nillable="true" type="q6:OrganizationUpdate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrganizationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdvancedSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="searchParameters" nillable="true" type="q7:ReshSearchParameters" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdvancedSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://register.nhn.no/CommunicationParty" minOccurs="0" name="AdvancedSearchResult" nillable="true" type="q8:SearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="term" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://register.nhn.no/CommunicationParty" minOccurs="0" name="SearchResult" nillable="true" type="q9:SearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReshUnit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+        <xs:element minOccurs="0" name="excludeDetails" type="xs:boolean" />
+        <xs:element minOccurs="0" name="includeChildUnits" type="xs:boolean" />
+        <xs:element minOccurs="0" name="treeAtTime" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReshUnitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="GetReshUnitResult" nillable="true" type="q10:ReshUnit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReshUnitWithInactiveChildren">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReshUnitWithInactiveChildrenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="GetReshUnitWithInactiveChildrenResult" nillable="true" type="q11:ReshUnit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTreatmentFacilityTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTreatmentFacilityTreeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="GetTreatmentFacilityTreeResult" nillable="true" type="q12:ArrayOfBusinessWithConnectedReshUnits" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="service" nillable="true" type="q13:ServiceCreate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="CreateServiceResult" nillable="true" type="q14:Service" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="service" nillable="true" type="q15:ServiceUpdate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServiceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConnectReshUnitToTreatmentFacility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+        <xs:element minOccurs="0" name="treatmentFacilityOrganizationNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConnectReshUnitToTreatmentFacilityResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisconnectReshUnitFromTreatmentFacility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisconnectReshUnitFromTreatmentFacilityResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrganizationByOrganizationNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="organizationNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrganizationByOrganizationNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="GetOrganizationByOrganizationNumberResult" nillable="true" type="q16:Organization" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCustomAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+        <xs:element xmlns:q17="http://register.nhn.no/Common" minOccurs="0" name="code" nillable="true" type="q17:Code" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCustomAttributeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://register.nhn.no/Common" minOccurs="0" name="AddCustomAttributeResult" nillable="true" type="q18:Code" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCustomAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+        <xs:element xmlns:q19="http://register.nhn.no/Common" minOccurs="0" name="code" nillable="true" type="q19:Code" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCustomAttributeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChangeLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChangeLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://register.nhn.no/Common" minOccurs="0" name="GetChangeLogResult" nillable="true" type="q20:ArrayOfEntityLogEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParentHistoryForReshUnit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParentHistoryForReshUnitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="GetParentHistoryForReshUnitResult" nillable="true" type="q21:ParentHistoryData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMappingNodes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMappingNodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="GetAllMappingNodesResult" nillable="true" type="q22:ArrayOfReshMappingNode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMappingNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMappingNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="GetMappingNodeResult" nillable="true" type="q23:ReshMappingNode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMappingNodesUnderReshId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reshId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMappingNodesUnderReshIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="GetMappingNodesUnderReshIdResult" nillable="true" type="q24:ArrayOfReshMappingNode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMappingNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mappingNodeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parentMappingNodeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reshId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMappingNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="CreateMappingNodeResult" nillable="true" type="q25:ReshMappingNode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMappingNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="updatedData" nillable="true" type="q26:ReshMappingNode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMappingNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="UpdateMappingNodeResult" nillable="true" type="q27:ReshMappingNode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMappingNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mappingNodeId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMappingNodeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMappingNodeDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mappingNodeId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMappingNodeDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="GetMappingNodeDetailResult" nillable="true" type="q28:ReshMappingNode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModifiedReshIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModifiedReshIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetModifiedReshIdsResult" nillable="true" type="q29:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModifiedParentLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModifiedParentLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://register.nhn.no/RESH" minOccurs="0" name="GetModifiedParentLinksResult" nillable="true" type="q30:ArrayOfParentLink" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

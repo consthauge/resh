@@ -1,0 +1,143 @@
+﻿@charset "UTF-8";
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background: #f0f0f0;
+    color: #676767;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -o-box-sizing: inherit;
+    -ms-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+::selection {
+    background: #555;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #555;
+    color: #fff;
+}
+
+/*--------------------------------------------------common styles*/
+
+p {
+    line-height: 1.5em;
+}
+
+img {
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    width: auto\9;
+}
+
+figure {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+/*--------------------------------------------------resh styles*/
+
+.resh {
+    min-height: 50vh;
+    padding: 3%;
+}
+
+    .resh table {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+        .resh table td {
+            width: 33%;
+        }
+
+            .resh table td:first-child {
+                width: auto;
+            }
+
+    .resh input {
+        font: normal 1em 'Roboto';
+    }
+
+        .resh input[type=text] {
+            font: normal 1em 'Roboto';
+        }
+
+        .resh input[type=submit] {
+            font: normal 1em 'Roboto';
+        }
+
+    .resh .btn {
+        font: 300 1em 'Roboto Slab';
+    }
+
+    .resh .btn-default {
+        font: 300 1em 'Roboto';
+        text-align: left;
+    }
+
+.resh-info {
+    background: none;
+}
+
+    .resh-info .wrapper {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        margin: 3% auto;
+        padding: 3%;
+    }
+
+    .resh-info .error {
+        display: block;
+        margin: 3% 0 0;
+    }
+
+.btn {
+    padding: 8px 12px;
+}

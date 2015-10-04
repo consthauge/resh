@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://register.nhn.no/CommunicationParty" elementFormDefault="qualified" targetNamespace="http://register.nhn.no/CommunicationParty" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" />
+  <xs:complexType name="SearchResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Facets" nillable="true" type="tns:ArrayOfSearchFacet" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" minOccurs="0" name="Results" nillable="true" type="q1:ArrayOfReshUnit" />
+      <xs:element minOccurs="0" name="TotalResults" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchResult" nillable="true" type="tns:SearchResult" />
+  <xs:complexType name="ArrayOfSearchFacet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchFacet" nillable="true" type="tns:SearchFacet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchFacet" nillable="true" type="tns:ArrayOfSearchFacet" />
+  <xs:complexType name="SearchFacet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodeValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Entries" nillable="true" type="tns:ArrayOfSearchResultFacetEntry" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchFacet" nillable="true" type="tns:SearchFacet" />
+  <xs:complexType name="ArrayOfSearchResultFacetEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchResultFacetEntry" nillable="true" type="tns:SearchResultFacetEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchResultFacetEntry" nillable="true" type="tns:ArrayOfSearchResultFacetEntry" />
+  <xs:complexType name="SearchResultFacetEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hits" type="xs:int" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchResultFacetEntry" nillable="true" type="tns:SearchResultFacetEntry" />
+</xs:schema>

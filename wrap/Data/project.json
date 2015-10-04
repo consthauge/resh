@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net452": {
+      "wrappedProject": "../../Data/Data.csproj",
+      "bin": {
+        "assembly": "../../Data/obj/{configuration}/Data.dll",
+        "pdb": "../../Data/obj/{configuration}/Data.pdb"
+      }
+    }
+  }
+}

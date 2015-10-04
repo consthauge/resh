@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://register.nhn.no/Resh" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://register.nhn.no/Resh" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://register.nhn.no/Resh/Imports">
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd0" namespace="http://register.nhn.no/Resh" />
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd3" namespace="http://register.nhn.no/Common" />
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NHN.Palantir.WebServices.Contracts.RESH.Data" />
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd6" namespace="http://register.nhn.no/CommunicationParty" />
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd7" namespace="http://register.nhn.no/Corporate" />
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd8" namespace="http://schemas.nhn.no/reg/HTKv1/en" />
+      <xsd:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd9" namespace="http://register.nhn.no/RESH" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReshService_CreateDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDepartment" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateDepartment_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://register.nhn.no/Common" name="detail" element="q1:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateDepartment_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://register.nhn.no/Common" name="detail" element="q2:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDepartment" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateDepartment_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://register.nhn.no/Common" name="detail" element="q3:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateDepartment_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://register.nhn.no/Common" name="detail" element="q4:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_MoveDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveDepartment" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_MoveDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_MoveDepartment_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://register.nhn.no/Common" name="detail" element="q5:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_MoveDepartment_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://register.nhn.no/Common" name="detail" element="q6:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateOrganization_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrganization" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateOrganization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrganizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateOrganization_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://register.nhn.no/Common" name="detail" element="q7:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateOrganization_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://register.nhn.no/Common" name="detail" element="q8:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateOrganization_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrganization" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateOrganization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrganizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateOrganization_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://register.nhn.no/Common" name="detail" element="q9:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateOrganization_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://register.nhn.no/Common" name="detail" element="q10:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_AdvancedSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdvancedSearch" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_AdvancedSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdvancedSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_AdvancedSearch_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://register.nhn.no/Common" name="detail" element="q11:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_Search_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://register.nhn.no/Common" name="detail" element="q12:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetReshUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReshUnit" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetReshUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReshUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetReshUnit_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://register.nhn.no/Common" name="detail" element="q13:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetReshUnit_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://register.nhn.no/Common" name="detail" element="q14:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetReshUnitWithInactiveChildren_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReshUnitWithInactiveChildren" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetReshUnitWithInactiveChildren_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReshUnitWithInactiveChildrenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetReshUnitWithInactiveChildren_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://register.nhn.no/Common" name="detail" element="q15:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetReshUnitWithInactiveChildren_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://register.nhn.no/Common" name="detail" element="q16:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetTreatmentFacilityTree_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTreatmentFacilityTree" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetTreatmentFacilityTree_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTreatmentFacilityTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetTreatmentFacilityTree_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://register.nhn.no/Common" name="detail" element="q17:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetTreatmentFacilityTree_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://register.nhn.no/Common" name="detail" element="q18:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateService_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateService" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateService_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://register.nhn.no/Common" name="detail" element="q19:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateService_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://register.nhn.no/Common" name="detail" element="q20:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateService" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateService_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://register.nhn.no/Common" name="detail" element="q21:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateService_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://register.nhn.no/Common" name="detail" element="q22:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_ConnectReshUnitToTreatmentFacility_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectReshUnitToTreatmentFacility" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_ConnectReshUnitToTreatmentFacility_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectReshUnitToTreatmentFacilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_ConnectReshUnitToTreatmentFacility_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://register.nhn.no/Common" name="detail" element="q23:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_ConnectReshUnitToTreatmentFacility_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://register.nhn.no/Common" name="detail" element="q24:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_DisconnectReshUnitFromTreatmentFacility_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectReshUnitFromTreatmentFacility" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_DisconnectReshUnitFromTreatmentFacility_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectReshUnitFromTreatmentFacilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_DisconnectReshUnitFromTreatmentFacility_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://register.nhn.no/Common" name="detail" element="q25:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_DisconnectReshUnitFromTreatmentFacility_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://register.nhn.no/Common" name="detail" element="q26:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetOrganizationByOrganizationNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationByOrganizationNumber" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetOrganizationByOrganizationNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationByOrganizationNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetOrganizationByOrganizationNumber_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://register.nhn.no/Common" name="detail" element="q27:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetOrganizationByOrganizationNumber_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://register.nhn.no/Common" name="detail" element="q28:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_AddCustomAttribute_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomAttribute" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_AddCustomAttribute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_AddCustomAttribute_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://register.nhn.no/Common" name="detail" element="q29:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_AddCustomAttribute_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://register.nhn.no/Common" name="detail" element="q30:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_RemoveCustomAttribute_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCustomAttribute" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_RemoveCustomAttribute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCustomAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_RemoveCustomAttribute_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://register.nhn.no/Common" name="detail" element="q31:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_RemoveCustomAttribute_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://register.nhn.no/Common" name="detail" element="q32:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetChangeLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangeLog" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetChangeLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangeLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetChangeLog_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://register.nhn.no/Common" name="detail" element="q33:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetParentHistoryForReshUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParentHistoryForReshUnit" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetParentHistoryForReshUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParentHistoryForReshUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetParentHistoryForReshUnit_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://register.nhn.no/Common" name="detail" element="q34:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetAllMappingNodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMappingNodes" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetAllMappingNodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMappingNodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetAllMappingNodes_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://register.nhn.no/Common" name="detail" element="q35:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetMappingNode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMappingNode" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetMappingNode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMappingNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetMappingNode_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://register.nhn.no/Common" name="detail" element="q36:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetMappingNodesUnderReshId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMappingNodesUnderReshId" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetMappingNodesUnderReshId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMappingNodesUnderReshIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetMappingNodesUnderReshId_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://register.nhn.no/Common" name="detail" element="q37:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateMappingNode_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMappingNode" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateMappingNode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMappingNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_CreateMappingNode_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://register.nhn.no/Common" name="detail" element="q38:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateMappingNode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMappingNode" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateMappingNode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMappingNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_UpdateMappingNode_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://register.nhn.no/Common" name="detail" element="q39:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_DeleteMappingNode_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMappingNode" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_DeleteMappingNode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMappingNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_DeleteMappingNode_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://register.nhn.no/Common" name="detail" element="q40:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetMappingNodeDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMappingNodeDetail" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetMappingNodeDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMappingNodeDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetMappingNodeDetail_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://register.nhn.no/Common" name="detail" element="q41:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetModifiedReshIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModifiedReshIds" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetModifiedReshIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModifiedReshIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetModifiedReshIds_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://register.nhn.no/Common" name="detail" element="q42:GenericFault" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetModifiedParentLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModifiedParentLinks" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetModifiedParentLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModifiedParentLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReshService_GetModifiedParentLinks_GenericFaultFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://register.nhn.no/Common" name="detail" element="q43:GenericFault" />
+  </wsdl:message>
+  <wsdl:portType name="IReshService">
+    <wsdl:operation name="CreateDepartment">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/CreateDepartment" message="tns:IReshService_CreateDepartment_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/CreateDepartmentResponse" message="tns:IReshService_CreateDepartment_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/CreateDepartmentGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_CreateDepartment_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/CreateDepartmentValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_CreateDepartment_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDepartment">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateDepartment" message="tns:IReshService_UpdateDepartment_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateDepartmentResponse" message="tns:IReshService_UpdateDepartment_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateDepartmentGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_UpdateDepartment_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateDepartmentValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_UpdateDepartment_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveDepartment">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/MoveDepartment" message="tns:IReshService_MoveDepartment_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/MoveDepartmentResponse" message="tns:IReshService_MoveDepartment_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/MoveDepartmentGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_MoveDepartment_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/MoveDepartmentValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_MoveDepartment_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrganization">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/CreateOrganization" message="tns:IReshService_CreateOrganization_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/CreateOrganizationResponse" message="tns:IReshService_CreateOrganization_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/CreateOrganizationGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_CreateOrganization_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/CreateOrganizationValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_CreateOrganization_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrganization">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateOrganization" message="tns:IReshService_UpdateOrganization_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateOrganizationResponse" message="tns:IReshService_UpdateOrganization_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateOrganizationGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_UpdateOrganization_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateOrganizationValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_UpdateOrganization_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdvancedSearch">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/AdvancedSearch" message="tns:IReshService_AdvancedSearch_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/AdvancedSearchResponse" message="tns:IReshService_AdvancedSearch_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/AdvancedSearchGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_AdvancedSearch_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/Search" message="tns:IReshService_Search_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/SearchResponse" message="tns:IReshService_Search_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/SearchGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_Search_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReshUnit">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetReshUnit" message="tns:IReshService_GetReshUnit_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetReshUnitResponse" message="tns:IReshService_GetReshUnit_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetReshUnitGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetReshUnit_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetReshUnitValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_GetReshUnit_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReshUnitWithInactiveChildren">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetReshUnitWithInactiveChildren" message="tns:IReshService_GetReshUnitWithInactiveChildren_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetReshUnitWithInactiveChildrenResponse" message="tns:IReshService_GetReshUnitWithInactiveChildren_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetReshUnitWithInactiveChildrenGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetReshUnitWithInactiveChildren_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetReshUnitWithInactiveChildrenValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_GetReshUnitWithInactiveChildren_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTreatmentFacilityTree">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetTreatmentFacilityTree" message="tns:IReshService_GetTreatmentFacilityTree_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetTreatmentFacilityTreeResponse" message="tns:IReshService_GetTreatmentFacilityTree_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetTreatmentFacilityTreeGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetTreatmentFacilityTree_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetTreatmentFacilityTreeValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_GetTreatmentFacilityTree_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateService">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/CreateService" message="tns:IReshService_CreateService_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/CreateServiceResponse" message="tns:IReshService_CreateService_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/CreateServiceGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_CreateService_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/CreateServiceValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_CreateService_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateService" message="tns:IReshService_UpdateService_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateServiceResponse" message="tns:IReshService_UpdateService_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateServiceGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_UpdateService_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateServiceValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_UpdateService_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConnectReshUnitToTreatmentFacility">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/ConnectReshUnitToTreatmentFacility" message="tns:IReshService_ConnectReshUnitToTreatmentFacility_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/ConnectReshUnitToTreatmentFacilityResponse" message="tns:IReshService_ConnectReshUnitToTreatmentFacility_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/ConnectReshUnitToTreatmentFacilityGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_ConnectReshUnitToTreatmentFacility_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/ConnectReshUnitToTreatmentFacilityValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_ConnectReshUnitToTreatmentFacility_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectReshUnitFromTreatmentFacility">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/DisconnectReshUnitFromTreatmentFacility" message="tns:IReshService_DisconnectReshUnitFromTreatmentFacility_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/DisconnectReshUnitFromTreatmentFacilityResponse" message="tns:IReshService_DisconnectReshUnitFromTreatmentFacility_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/DisconnectReshUnitFromTreatmentFacilityGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_DisconnectReshUnitFromTreatmentFacility_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/DisconnectReshUnitFromTreatmentFacilityValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_DisconnectReshUnitFromTreatmentFacility_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationByOrganizationNumber">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetOrganizationByOrganizationNumber" message="tns:IReshService_GetOrganizationByOrganizationNumber_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetOrganizationByOrganizationNumberResponse" message="tns:IReshService_GetOrganizationByOrganizationNumber_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetOrganizationByOrganizationNumberGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetOrganizationByOrganizationNumber_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetOrganizationByOrganizationNumberValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_GetOrganizationByOrganizationNumber_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomAttribute">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/AddCustomAttribute" message="tns:IReshService_AddCustomAttribute_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/AddCustomAttributeResponse" message="tns:IReshService_AddCustomAttribute_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/AddCustomAttributeGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_AddCustomAttribute_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/AddCustomAttributeValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_AddCustomAttribute_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCustomAttribute">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/RemoveCustomAttribute" message="tns:IReshService_RemoveCustomAttribute_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/RemoveCustomAttributeResponse" message="tns:IReshService_RemoveCustomAttribute_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/RemoveCustomAttributeGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_RemoveCustomAttribute_GenericFaultFault_FaultMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/RemoveCustomAttributeValidationFaultFault" name="ValidationFaultFault" message="tns:IReshService_RemoveCustomAttribute_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChangeLog">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetChangeLog" message="tns:IReshService_GetChangeLog_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetChangeLogResponse" message="tns:IReshService_GetChangeLog_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetChangeLogGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetChangeLog_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParentHistoryForReshUnit">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetParentHistoryForReshUnit" message="tns:IReshService_GetParentHistoryForReshUnit_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetParentHistoryForReshUnitResponse" message="tns:IReshService_GetParentHistoryForReshUnit_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetParentHistoryForReshUnitGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetParentHistoryForReshUnit_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMappingNodes">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetAllMappingNodes" message="tns:IReshService_GetAllMappingNodes_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetAllMappingNodesResponse" message="tns:IReshService_GetAllMappingNodes_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetAllMappingNodesGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetAllMappingNodes_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMappingNode">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetMappingNode" message="tns:IReshService_GetMappingNode_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetMappingNodeResponse" message="tns:IReshService_GetMappingNode_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetMappingNodeGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetMappingNode_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMappingNodesUnderReshId">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetMappingNodesUnderReshId" message="tns:IReshService_GetMappingNodesUnderReshId_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetMappingNodesUnderReshIdResponse" message="tns:IReshService_GetMappingNodesUnderReshId_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetMappingNodesUnderReshIdGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetMappingNodesUnderReshId_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMappingNode">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/CreateMappingNode" message="tns:IReshService_CreateMappingNode_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/CreateMappingNodeResponse" message="tns:IReshService_CreateMappingNode_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/CreateMappingNodeGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_CreateMappingNode_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMappingNode">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateMappingNode" message="tns:IReshService_UpdateMappingNode_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateMappingNodeResponse" message="tns:IReshService_UpdateMappingNode_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/UpdateMappingNodeGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_UpdateMappingNode_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMappingNode">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/DeleteMappingNode" message="tns:IReshService_DeleteMappingNode_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/DeleteMappingNodeResponse" message="tns:IReshService_DeleteMappingNode_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/DeleteMappingNodeGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_DeleteMappingNode_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMappingNodeDetail">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetMappingNodeDetail" message="tns:IReshService_GetMappingNodeDetail_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetMappingNodeDetailResponse" message="tns:IReshService_GetMappingNodeDetail_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetMappingNodeDetailGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetMappingNodeDetail_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModifiedReshIds">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetModifiedReshIds" message="tns:IReshService_GetModifiedReshIds_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetModifiedReshIdsResponse" message="tns:IReshService_GetModifiedReshIds_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetModifiedReshIdsGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetModifiedReshIds_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModifiedParentLinks">
+      <wsdl:input wsam:Action="http://register.nhn.no/Resh/IReshService/GetModifiedParentLinks" message="tns:IReshService_GetModifiedParentLinks_InputMessage" />
+      <wsdl:output wsam:Action="http://register.nhn.no/Resh/IReshService/GetModifiedParentLinksResponse" message="tns:IReshService_GetModifiedParentLinks_OutputMessage" />
+      <wsdl:fault wsam:Action="http://register.nhn.no/Resh/IReshService/GetModifiedParentLinksGenericFaultFault" name="GenericFaultFault" message="tns:IReshService_GetModifiedParentLinks_GenericFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

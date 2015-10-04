@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://register.nhn.no/Corporate" elementFormDefault="qualified" targetNamespace="http://register.nhn.no/Corporate" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd3" namespace="http://register.nhn.no/Common" />
+  <xs:import schemaLocation="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd8" namespace="http://schemas.nhn.no/reg/HTKv1/en" />
+  <xs:complexType name="Business">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Children" nillable="true" type="tns:ArrayOfBusiness" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://register.nhn.no/Common" minOccurs="0" name="ElectronicAddresses" nillable="true" type="q1:ArrayOfElectronicAddress" />
+      <xs:element xmlns:q2="http://register.nhn.no/Common" minOccurs="0" name="GeographicalCoordinates" nillable="true" type="q2:LatitudeLongitude" />
+      <xs:element xmlns:q3="http://register.nhn.no/Common" minOccurs="0" name="IndustryCodes" nillable="true" type="q3:ArrayOfCode" />
+      <xs:element minOccurs="0" name="IsGovernmentCompany" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastChanged" type="xs:dateTime" />
+      <xs:element xmlns:q4="http://register.nhn.no/Common" minOccurs="0" name="Municipality" nillable="true" type="q4:Code" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://register.nhn.no/Common" minOccurs="0" name="OpeningHours" nillable="true" type="q5:OpeningHours" />
+      <xs:element minOccurs="0" name="OrganizationNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentOrganizationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentOrganizationNumber" nillable="true" type="xs:int" />
+      <xs:element xmlns:q6="http://register.nhn.no/Common" minOccurs="0" name="PhysicalAddresses" nillable="true" type="q6:ArrayOfPhysicalAddress" />
+      <xs:element xmlns:q7="http://register.nhn.no/Common" minOccurs="0" name="Properties" nillable="true" type="q7:ArrayOfCode" />
+      <xs:element minOccurs="0" name="ResponsiblePerson" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://register.nhn.no/Common" minOccurs="0" name="SectorCode" nillable="true" type="q8:Code" />
+      <xs:element minOccurs="0" name="Services" nillable="true" type="tns:ArrayOfService" />
+      <xs:element minOccurs="0" name="UpdatedOn" type="xs:dateTime" />
+      <xs:element xmlns:q9="http://register.nhn.no/Common" minOccurs="0" name="Valid" nillable="true" type="q9:Period" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Business" nillable="true" type="tns:Business" />
+  <xs:complexType name="ArrayOfBusiness">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Business" nillable="true" type="tns:Business" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBusiness" nillable="true" type="tns:ArrayOfBusiness" />
+  <xs:complexType name="ArrayOfService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Service" nillable="true" type="tns:Service" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfService" nillable="true" type="tns:ArrayOfService" />
+  <xs:complexType name="Service">
+    <xs:sequence>
+      <xs:element xmlns:q10="http://register.nhn.no/Common" minOccurs="0" name="AppliesToMunicipalities" nillable="true" type="q10:ArrayOfCode" />
+      <xs:element xmlns:q11="http://register.nhn.no/Common" minOccurs="0" name="Attributes" nillable="true" type="q11:ArrayOfCode" />
+      <xs:element xmlns:q12="http://register.nhn.no/Common" minOccurs="0" name="Code" nillable="true" type="q12:Code" />
+      <xs:element minOccurs="0" name="Contracts" nillable="true" type="tns:ArrayOfContract" />
+      <xs:element xmlns:q13="http://register.nhn.no/Common" minOccurs="0" name="OpeningHours" nillable="true" type="q13:OpeningHours" />
+      <xs:element minOccurs="0" name="OwnerDisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerHtkDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerReshId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ServiceTypedValues" nillable="true" type="tns:ArrayOfServiceTypedValue" />
+      <xs:element minOccurs="0" name="ServiceVariants" nillable="true" type="tns:ArrayOfServiceVariant" />
+      <xs:element xmlns:q14="http://schemas.nhn.no/reg/HTKv1/en" minOccurs="0" name="Treatment" nillable="true" type="q14:Treatment" />
+      <xs:element xmlns:q15="http://register.nhn.no/Common" minOccurs="0" name="Valid" nillable="true" type="q15:Period" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Service" nillable="true" type="tns:Service" />
+  <xs:complexType name="ArrayOfContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contract" nillable="true" type="tns:Contract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContract" nillable="true" type="tns:ArrayOfContract" />
+  <xs:complexType name="Contract">
+    <xs:sequence>
+      <xs:element xmlns:q16="http://register.nhn.no/Common" minOccurs="0" name="ContractType" nillable="true" type="q16:CompositeCode" />
+      <xs:element minOccurs="0" name="ContractWith" type="xs:int" />
+      <xs:element minOccurs="0" name="ContractWithName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasConsiderationCompetence" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q17="http://register.nhn.no/Common" minOccurs="0" name="Valid" nillable="true" type="q17:Period" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contract" nillable="true" type="tns:Contract" />
+  <xs:complexType name="ArrayOfServiceTypedValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceTypedValue" nillable="true" type="tns:ServiceTypedValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceTypedValue" nillable="true" type="tns:ArrayOfServiceTypedValue" />
+  <xs:complexType name="ServiceTypedValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IntValue" type="xs:int" />
+      <xs:element xmlns:q18="http://register.nhn.no/Common" minOccurs="0" name="Type" nillable="true" type="q18:CompositeCode" />
+      <xs:element xmlns:q19="http://register.nhn.no/Common" minOccurs="0" name="Valid" nillable="true" type="q19:Period" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceTypedValue" nillable="true" type="tns:ServiceTypedValue" />
+  <xs:complexType name="ArrayOfServiceVariant">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceVariant" nillable="true" type="tns:ServiceVariant" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceVariant" nillable="true" type="tns:ArrayOfServiceVariant" />
+  <xs:complexType name="ServiceVariant">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q20="http://register.nhn.no/Common" minOccurs="0" name="Domain" nillable="true" type="q20:CompositeCode" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q21="http://register.nhn.no/Common" minOccurs="0" name="OfferedTreatmentLevels" nillable="true" type="q21:ArrayOfCompositeCode" />
+      <xs:element minOccurs="0" name="ServiceVariantTypedValue" nillable="true" type="tns:ArrayOfServiceVariantTypedValue" />
+      <xs:element xmlns:q22="http://register.nhn.no/Common" minOccurs="0" name="Valid" nillable="true" type="q22:Period" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceVariant" nillable="true" type="tns:ServiceVariant" />
+  <xs:complexType name="ArrayOfServiceVariantTypedValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceVariantTypedValue" nillable="true" type="tns:ServiceVariantTypedValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceVariantTypedValue" nillable="true" type="tns:ArrayOfServiceVariantTypedValue" />
+  <xs:complexType name="ServiceVariantTypedValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IntValue" type="xs:int" />
+      <xs:element xmlns:q23="http://register.nhn.no/Common" minOccurs="0" name="TreatmentLevel" nillable="true" type="q23:CompositeCode" />
+      <xs:element xmlns:q24="http://register.nhn.no/Common" minOccurs="0" name="Type" nillable="true" type="q24:CompositeCode" />
+      <xs:element xmlns:q25="http://register.nhn.no/Common" minOccurs="0" name="Valid" nillable="true" type="q25:Period" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceVariantTypedValue" nillable="true" type="tns:ServiceVariantTypedValue" />
+</xs:schema>

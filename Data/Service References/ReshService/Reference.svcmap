@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="25b57ece-ddda-4355-838e-1ffb63b93795" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://ws-web.test.nhn.no/v1/RESH" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RESH.xsd" MetadataType="Schema" ID="f5d73488-1f3c-4f6d-bbab-e9424918e332" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd5" />
+    <MetadataFile FileName="RESH1.xsd" MetadataType="Schema" ID="ad358921-bc5c-4966-bc23-dc916815f1ed" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd4" />
+    <MetadataFile FileName="RESH.disco" MetadataType="Disco" ID="2b7f2679-e0b1-4fa3-b704-236860efb773" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?disco" />
+    <MetadataFile FileName="RESH2.xsd" MetadataType="Schema" ID="34b75d26-11a7-4cf7-b20d-9c04d2f74476" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd9" />
+    <MetadataFile FileName="Resh.wsdl" MetadataType="Wsdl" ID="2e1c5f53-4514-497f-b797-8a0142bc94c6" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?wsdl" />
+    <MetadataFile FileName="RESH3.xsd" MetadataType="Schema" ID="1970d4d1-ce3c-4641-bb53-271cdbb25074" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd7" />
+    <MetadataFile FileName="RESH4.xsd" MetadataType="Schema" ID="537efbb0-2ab7-4bd4-9054-11dd816ba8c8" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd1" />
+    <MetadataFile FileName="RESH1.wsdl" MetadataType="Wsdl" ID="410d0aaa-b442-4214-ba1c-1eae226ec99e" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?wsdl=wsdl0" />
+    <MetadataFile FileName="RESH5.xsd" MetadataType="Schema" ID="6444738f-74c0-48b7-be5c-d667e613558e" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd3" />
+    <MetadataFile FileName="RESH6.xsd" MetadataType="Schema" ID="e4bfb3c1-10fa-4ec2-9475-08c9c6c6263e" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd0" />
+    <MetadataFile FileName="RESH7.xsd" MetadataType="Schema" ID="111ec072-85a5-423d-8137-7a4fb1126c9e" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd6" />
+    <MetadataFile FileName="RESH8.xsd" MetadataType="Schema" ID="35d784c1-1016-4c85-90b6-f675ad231423" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd8" />
+    <MetadataFile FileName="RESH9.xsd" MetadataType="Schema" ID="bd995be0-8f3f-4c4b-adea-52a9ceac40b8" SourceId="1" SourceUrl="https://ws-web.test.nhn.no/v1/RESH?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
